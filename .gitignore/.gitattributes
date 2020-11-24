@@ -1,0 +1,21 @@
+package library;
+
+import java.util.Scanner;
+
+public class dueborrow_date {
+
+public static void main(String[] args) {
+
+System.out.print("Please input the date in which you want to borrow or reserve a book in YYYY-MM-DD:- ");
+     
+        String input = scanner.nextLine();
+         
+        LocalDate date = LocalDate.parse(input);
+        
+        date = date.plusDays(30);
+         
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd MMM yyyy");
+         
+        System.out.println("You have to return the book or your reservation will be cancelled in " +date.format(fmt));
+       }
+       }
